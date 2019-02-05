@@ -1,5 +1,5 @@
 -- 查询单词
-select * from etymology where word = 'in';
+select * from etymology where word = 'ible';
 
 --插入专有名词
 insert into etymology(word,meaning) values('paris','巴黎');
