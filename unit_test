@@ -1,0 +1,22 @@
+你是一位资深的 Java 开发工程师,以上是相关类的源代码
+请为 com.alibaba.ascp.transfer.plan.activity.impl.schedulerx.flow.CapacityAlgorithmInvokeProcessor 实现单元测试
+要求：
+1. 限定只能使用junit4 powermock mockito 三个单元测试框架
+2. mock 参数时避免直接使用 any ()，举例：如果入参是 string 类型，请使用 anyString ()，如果入参是 int 类型，请使用 anyInt ()。
+3. 需要对所有依赖进行mock，包括依赖类的静态方法,构造方法以及非静态方法
+4. 自身的内部方法也需要mock
+5. 如果某个依赖的类是final的,请使用powermock进行mock
+6. 每个单测方法，请添加方法注释，代码内部拆分为 3 部分（//prepare, //action, //assert），有 public 关键字。
+7. 请正确 import 所有依赖类。
+
+我有一个maven项目，请使用python3 帮我写一个脚本实现根据一个类获取该类的源代码以及该类直接使用到的类的源代码
+该脚本有两个入参第一个是类的全路径，第二个是maven项目的路径
+该maven项目是是一个多module的项目，项目内的文件需要在多个module中查找
+所有的外部jar包都在/Users/cyc/Documents/repo/lib这个目录下
+如果该类是外部jar包的文件，使用该类反编译后的源代码，反编译工具使用procyon,本机已经安装可以直接使用
+外部jar包里面的类文件只需要获取com.aidc,com.alibaba开头的类的源文件
+其中以-start结尾的模块是main函数所在的模块
+进入start模块通过mvn dependency:tree命令获取 整个maven项目依赖了哪些jar包，然后在这些jar包中查找需要反编译的文件
+扫描外部jar时，需要打印出当前扫描的进度
+最后将所有源代码写入到指定文件夹内的一个文件里面
+在写入的文件末尾添加一行文字，内容是 请为 xxx 类实现单元测试，并生成一个测试文件，xxx就是输入的类名
